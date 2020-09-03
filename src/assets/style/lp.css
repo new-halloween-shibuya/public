@@ -1,0 +1,154 @@
+@custom-media --md (min-width: 500px) and (max-width: 1024px);
+@custom-media --lg (min-width: 1024px);
+
+.section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &-content {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (--md) {
+      width: 80%;
+    }
+    @media (--lg) {
+      width: 80%;
+    }
+  }
+  &-action {
+    margin: 2em auto;
+    text-align: center;
+  }
+}
+
+.top{
+  #hero {
+    background: #fff;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      margin: auto;
+    }
+  }
+  
+  #comments {
+    background: #D06500;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      margin: auto;
+    }
+  }
+
+  #product {
+    img {
+      margin: auto;
+      margin-bottom: 2em;
+    }
+
+    .item {
+      width: 50%;
+
+      @media (--md) {
+        width: 33.333%;
+      }
+
+      @media (--lg) {
+        width: 33.333%;
+      }
+    }
+  }
+
+  #release {
+    .item {
+      padding: 2em 0;
+      border-bottom: 1px solid #eee;
+  
+      &:first-child {
+        border-top: 1px solid #eee;
+      }
+  
+      a {
+        display: inline-block;
+      }
+    }
+  
+    .date, .tags {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  
+    .tags {
+      color: #aaa
+    }
+  
+    .imgs {
+      img {
+        display: inline-block;
+        margin-right: 4px
+      }
+    }
+  }
+
+  #partner {
+    .item {
+      width: 50%;
+
+      @media (--md) {
+        width: 33.333%;
+      }
+
+      @media (--lg) {
+        width: 33.333%;
+      }
+    }
+
+    img {
+      margin: auto;
+    }
+
+    .annotation {
+      margin-top: 2em;
+    }
+  }
+
+  #share {
+    .section-content {
+      text-align: center;
+  
+      @media (--md) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+    
+      @media (--lg) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+  
+      .item {
+        margin-bottom: 2em;
+        .tw {
+          background: #03abf0;
+        }
+        .fb {
+          background: #3d549a;
+        }
+        .le {
+          background: #09b53b;
+        }
+      }
+    }
+  }
+}
