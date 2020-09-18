@@ -3,8 +3,47 @@ include /env.pug
 block vars
 
 .layout
-  label#menu-btn(for="menu-toggle") :
-  input#menu-toggle(type="checkbox")
-  #menu.sp
-    each menu in menus
-      a(href=`${menu.href}`) #{menu.label} 
+  #menu-btn
+    svg(width='56', height='76', viewBox='0 0 56 76', fill='none', xmlns='http://www.w3.org/2000/svg')
+      g.eye
+        circle(cx="28" cy="25" r="19" fill='none' stroke="#000" stroke-width="10")
+        circle(cx="31" cy="21" r="7" fill="#000")
+          animateTransform(attributename='transform', type='rotate', from='0 25 25', to='360 25 25', dur='1.2s', repeatcount='indefinite')
+      g.close
+        circle(cx="28" cy="25" r="19" fill='none' stroke="#000" stroke-width="10")
+        line(x1="14" y1="17" x2="48" y2="35" stroke="black" stroke-width="8")
+        line(x1="40" y1="14" x2="14" y2="40" stroke="black" stroke-width="8")
+      g
+        path(d='M13.6 75.7001H10.9V70.7001C10.9 70.0001 10.9 68.2001 10.9 67.7001C10.7 68.2001 10.3 69.2001 9.89996 70.0001L7.09998 76.0001L4.29996 70.0001C3.89996 69.2001 3.49996 68.3001 3.29996 67.7001C3.29996 68.2001 3.29996 70.0001 3.29996 70.7001V75.7001H0.599976V62.1001H3.19998L5.99997 68.3001C6.39997 69.1001 6.79996 70.1001 6.89996 70.6001C7.09996 70.1001 7.49996 69.1001 7.79996 68.3001L10.5 62.1001H13.2V75.7001H13.6Z', fill='black')
+        path(d='M26.8 75.7001H17.1V62.1001H26.5V64.8001H19.8V67.2001H23.7V69.8001H19.8V73.1001H26.8V75.7001Z', fill='black')
+        path(d='M40.7 75.7H38.3L33.3 68.3C33 67.8 32.5 67.1 32.3 66.8C32.3 67.3 32.3 69 32.3 69.8V75.8H29.6V62.1H32.2L37 69.3C37.3 69.8 37.8 70.5 38 70.8C38 70.3 38 68.6 38 67.8V62H40.7V75.7V75.7Z', fill='black')
+        path(d='M55.1 69.7001C55.1 73.6001 53 75.9001 49.6 75.9001C46.3 75.9001 44.1 73.7001 44.1 69.7001V62.1001H46.8V69.7001C46.8 71.9001 47.8 73.3001 49.6 73.3001C51.4 73.3001 52.4 72.0001 52.4 69.8001V62.2001H55.1V69.7001Z', fill='black')
+  #menu.sp.font-style-1
+    .list
+      .li
+        a.section-title(href="#top") TOP
+      //- .li
+      //-   a.section-title(href="#top") 区長メッセージ
+      .li
+        a.section-title(href="#content") 新しいハロウィン
+      .li
+        a.section-title(href="#sns") SNS
+      .li
+        a.section-title(href="#partner") お問い合わせ
+  script.
+    const menu = document.querySelector('#menu')
+    const togl = document.querySelector('#menu-btn')
+    togl.addEventListener('click', () => {
+      if(menu.style.display === 'block') {
+        menu.style.display = 'none'
+      } else {
+        menu.style.display = 'block'
+      }
+    })
+
+    const menuBtns = document.querySelectorAll('#menu a')
+    Array.prototype.forEach.call(menuBtns, node => {
+      node.addEventListener('click', () => {
+        menu.style.display = 'none'
+      })
+    });

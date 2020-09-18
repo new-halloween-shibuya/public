@@ -1,6 +1,25 @@
 include /env.pug
 
-.copyright ©2020 #{env.site.owner}
+img(src="/images/footer-bg.svg")
+.wrap
+  img(src="/images/footer-logo.svg")
+  .section.owner
+    .section-title
+      span 主催
+    .li HELLO! NEW HALLOWEEN実⾏委員会
+  if support.length > 0
+    .section.support
+      .section-title
+        span 後援
+      each item in support
+        .li {{ item }}
+  if sponsor.length > 0
+    .section.sponsor
+      .section-title
+        span 共同企業
+      each item in sponsor
+        .li {{ item }}
+  .copyright ©2020 #{env.site.owner}
 
 script.
   (function(d) {
@@ -11,3 +30,6 @@ script.
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
+script(src="https://unpkg.com/scrollreveal")
+script.
+  ScrollReveal().reveal('.fadein', { distance: '50px' });
