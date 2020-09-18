@@ -164,7 +164,7 @@ img {
   display: flex;
   align-items: center;
   color: #fff;
-  background: #000;
+  /* background: #000; */
 
   a {
     display: inline-block;
@@ -187,7 +187,7 @@ img {
     width: 100%;
     font-size: 80%;
     text-align: right;
-    background: #000;
+    /* background: #000; */
     top: 0;
 
     display: none;
@@ -252,4 +252,16 @@ img {
   &.loading {
     display: none !important;
   }
+}
+
+.font-style-1 {
+  font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-style-2 {
+  font-family: interstate, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
