@@ -4,20 +4,38 @@ block vars
   - var COPY = "子どもとマスクづくりハロウィン"
   -
     var BODY = [
-      "１⽇だけのお祭りよりも、",
-      "毎⽇のマスクで仮装気分。",
-      "ジャック・オ・ランタン、",
-      "ドラキュラ、狼男…",
-      "つけるだけで仮装できる、",
-      "ドネーション付きマスクを作りました。",
-      "",
-      "ハロウィンイベントだけでなく、",
-      "さまざまなカルチャーが⽣まれてきた渋⾕。",
-      "渋⾕の街をこれからも",
-      "よりよく変化させていくために、",
-      "売り上げの⼀部は、",
-      "街のメンテナンスや",
-      "ゴミ清掃の費⽤として寄付されます。"
+      "友だちと遊ぶときも、",
+      "幼稚園や⼩学校に⾏くときも、",
+      "いつもマスクがついてくる。",
+      "顔が隠れちゃう？",
+      "みんな⼀緒でつまらない？",
+      "それならマスクをキャンバスにして、",
+      "あたらしい顔をつくっちゃおう。",
+      "さあ、マスクひとつで⼤変⾝！",
+      "オリジナルのハロウィンマスクの",
+      "作り⽅をご紹介。",
+      "世界に⼀つの顔マスクをつけて、",
+      "みんなで笑顔になろう。"
+    ]
+  -
+    var course = [
+      {
+        label: '布マスク、布用ボンド、好きな布、はさみ、型紙を用意します。',
+        attention: [
+          "＊安全なボンドをお使いください",
+          "＊子ども用の安全なはさみをご用意ください"
+        ],
+        href: "https://example.com"
+      },
+      {
+        label: '型紙にあわせて布を切り、パーツをつくります。'
+      },
+      {
+        label: 'パーツをボンドでマスクに貼りつけて、'
+      },
+      {
+        label: '完成です！'
+      }
     ]
 
 include /component/globals/head.pug
@@ -26,31 +44,32 @@ include /component/globals/head.pug
       .global-header
         include /component/globals/header.pug
       .global-body
-        #hero
-          .section.fadein
-            .section-title
+        .hero.fadein
+          .wrap
+            .hero-title
               span.catch あたらしい<br />ハロウィン
               spam.num.font-style-2 #{INDEX}
               span.copy #!{COPY}
               img(width="80px" src="/images/split-musk.svg")
-            .section-content
+            .hero-content
               img(src=`/images/content-${INDEX}.jpg`)
               .body
                 each item in BODY
                   span.inline-block #{item}
-          .sub
-            each item in BODY
-              span.inline-block #{item}
-        section#musk
+            .hero-sub
+              each item in BODY
+                span.inline-block #{item}
+        section.section#ws
           .section-content 
-            .btn 10/1 発売開始！
-            .items
-              - for (var x = 0; x < 10; x++)
+            .course
+              each item, i in course
                 .item
-                  img(src=`/images/musk/musk-${x+1}.png`)
-            .photos
-              - for (var x = 0; x < 3; x++)
-                .item
-                  img(src=`/images/musk/photos-${x+1}.jpg`)
+                  img.num(src=`/images/ws-num-${i+1}.svg`, alt=`${i+1}`)
+                  .label #{item.label}
+                  img.img(src=`/images/ws-${i+1}.jpg`, alt=`${item.label}`)
+                  if i === 0
+                    .btn-wrap
+                      a.btn(href=`${item.href}` download) 型紙はこちら
+
       .global-footer
         include /component/globals/footer.pug

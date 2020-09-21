@@ -23,7 +23,7 @@ include /component/globals/head.pug
       .global-header
         include /component/globals/header.pug
       .global-body
-        #hero
+        .wrap#hero
           .main
             img.sp(src="/images/main.svg")
             img.pc(src="/images/main-pc.svg")
@@ -33,7 +33,7 @@ include /component/globals/head.pug
             img.sp(src="/images/hash.svg")
             img.pc(src="/images/hash-pc.svg")
             p 集まらないハロウィンを楽しむためのさまざまな取り組みを⾏います
-        #content
+        .wrap#content
           each item, i in contents
             section.section.fadein(id=`c0${i+1}`)
               .section-title
@@ -44,7 +44,7 @@ include /component/globals/head.pug
               section-content
                 img(src=`/images/content-0${i+1}.jpg`)
                 p !{item.body}
-        #sns
+        .wrap#sns
           section.section#04
             .section-title
               .label.font-style-2 SNS
@@ -57,7 +57,7 @@ include /component/globals/head.pug
                 img(src="/images/tw.svg")
               a(href="")
                 img(src="/images/ig.svg")
-        #partner
+        .wrap#partner
           section.section#05
             .section-title
               img(src="/images/title-05.svg")

@@ -26,22 +26,22 @@ include /component/globals/head.pug
       .global-header
         include /component/globals/header.pug
       .global-body
-        #hero
-          .section.fadein
-            .section-title
+        .hero.fadein
+          .wrap
+            .hero-title
               span.catch あたらしい<br />ハロウィン
               spam.num.font-style-2 #{INDEX}
               span.copy #!{COPY}
               img(width="80px" src="/images/split-musk.svg")
-            .section-content
+            .hero-content
               img(src=`/images/content-${INDEX}.jpg`)
               .body
                 each item in BODY
                   span.inline-block #{item}
-          .sub
-            each item in BODY
-              span.inline-block #{item}
-        section#musk
+            .hero-sub
+              each item in BODY
+                span.inline-block #{item}
+        section.section#musk
           .section-content 
             .btn 10/1 発売開始！
             .items

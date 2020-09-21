@@ -12,6 +12,14 @@
       justify-content: center;
       align-items: center;
       padding: 40px;
+      
+      @media (--md) {
+        height: auto;
+      }
+    
+      @media (--lg) {
+        height: auto;
+      }
     }
     
     .sub {
@@ -48,9 +56,11 @@
     
       @media (--md) {
         flex-basis: 30%;
+        width: 30%;
       }
       @media (--lg) {
         flex-basis: 30%;
+        width: 30%;
       }
   
       &-title {
