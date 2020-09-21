@@ -3,6 +3,8 @@ include /env.pug
 block vars
 
 .layout
+  .brand
+    img(src="/images/small-logo.svg", alt="")
   #menu-btn
     svg(width='56', height='76', viewBox='0 0 56 76', fill='none', xmlns='http://www.w3.org/2000/svg')
       g.eye
@@ -25,7 +27,12 @@ block vars
       //- .li
       //-   a.section-title(href="#top") 区長メッセージ
       .li
-        a.section-title(href="#content") 新しいハロウィン
+        a.section-title(href="#content") #あたらしいハロウィン
+        ul
+          li: a(href="/musk") マスクで毎日ハロウィン
+          li: a(href="/") 子どもとマスクづくり
+
+          li: a(href="/") プレゼントマスクでハロウィン"
       .li
         a.section-title(href="#sns") SNS
       .li
