@@ -7,8 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 40px;
   }
   
   .sub {
@@ -17,48 +16,109 @@
   }
   
   .hash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: 77px;
     padding-right: 30px;
     padding-left: 30px;
+    text-align: left;
   }
 }
 
 #content{
   padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  @media (--md) {
+    display: flex;
+  }
+  @media (--lg) {
+    display: flex;
+  }
 
   .section {
-    padding-top: 95px;
+    padding-top: 70px;
   
+    @media (--md) {
+      flex-basis: 30%;
+    }
+    @media (--lg) {
+      flex-basis: 30%;
+    }
+
     &-title {
-      transform: rotate(-3deg);
-    
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (--md) {
+        min-height: 16em;
+      }
+      @media (--lg) {
+        min-height: 16em;
+      }
+      
       img {
         margin: 0 auto;
+        margin-top: 10px;
         margin-bottom: 30px;
+      }
+
+      .catch {
+        font-size: 14px;
+      }
+      .num {
+        font-size: 64px;
+        line-height: 1em;
+      }
+      .copy {
+        font-size: 30px;
+        line-height: 1.2em;
+        text-align: center;
+        margin-bottom: auto;
+        margin-top: auto;
+        white-space: nowrap;
       }
     }
   
     &-content {
-      padding: 0 30px
     }
   }
+
+
 }
 
 #sns {
   padding: 0 20px;
-  padding-top: 70px;
+  padding-top: 170px;
 
   .section {
     background: #CF6500;
-    padding: 20px
+    padding: 20px;
+
+    &-title {
+      text-align: center;
+
+      .label {
+        font-size: 64px;
+        color: #fff;
+      }
+    }
   }
 
   .flex-box {
-    justify-content: space-evenly;
+    justify-content: center;
   }
   
   .share {
-    margin-top: 40px
+    a {
+      display: inline-block;
+      margin: 40px
+    }
   }
 }
 
@@ -79,4 +139,8 @@
     text-align: center;
     margin-bottom: 20px;
   }
+}
+
+.color-white { 
+  color: #fff
 }

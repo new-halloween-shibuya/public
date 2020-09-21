@@ -1,6 +1,21 @@
 block vars
   - var BODY_CLASS = "top"
   - var CATCH_COPY = "今年は、集まらないハロウィンを。"
+  -
+    var contents = [
+      {
+        copy: "マスクで毎日ハロウィン",
+        body: "毎日をハロウィンに。ジャック・オ・ランタン、ドラキュラ、狼男…つけるだけで仮装できる、ドネーション付きマスクです。"
+      },
+      {
+        copy: "子どもとマスクづくり<br />ハロウィン",
+        body: "子どもたちとつくる、オリジナルハロウィンマスクの作り方をご紹介します。"
+      },
+      {
+        copy: "プレゼントマスクで<br />ハロウィン",
+        body: "抽選でハロウィンマスクをプレゼント！詳しくはこちらから。 ( 応募期間 2020.9.24 - 2020.10.14)"
+      }
+    ]
 
 include /component/globals/head.pug
   .page-wrap
@@ -10,34 +25,32 @@ include /component/globals/head.pug
       .global-body
         #hero
           .main
-            img(src="/images/main.svg")
+            img.sp(src="/images/main.svg")
+            img.pc(src="/images/main-pc.svg")
           .sub
-            img(src="/images/sub.svg")
+            img.sp(src="/images/sub.svg")
           .hash
-            img(src="/images/hash.svg")
+            img.sp(src="/images/hash.svg")
+            img.pc(src="/images/hash-pc.svg")
             p 集まらないハロウィンを楽しむためのさまざまな取り組みを⾏います
         #content
-          section.fadein.section#01
-            .section-title
-              img(src="/images/title-01.svg")
-              img(src="/images/content-01.jpg")
-            .section-content
-              p 毎日をハロウィンに。ジャック・オ・ランタン、ドラキュラ、狼男…つけるだけで仮装できる、ドネーション付きマスクです。
-          section.fadein.section#02
-            .section-title
-              img(src="/images/title-02.svg")
-              img(src="/images/content-02.jpg")
-            .section-content
-              p 子どもたちとつくる、オリジナルハロウィンマスクの作り方をご紹介します。
-          section.fadein.section#03
-            .section-title
-              img(src="/images/title-03.svg")
-            .section-content
-              p(style="text-align: center") # COMING SOON
+          each item, i in contents
+            section.section.fadein(id=`c0${i+1}`)
+              .section-title
+                span.catch あたらしい<br />ハロウィン
+                spam.num.font-style-2 0#{i+1}
+                span.copy #!{item.copy}
+                img(width="30%" src="/images/split-musk.svg")
+              section-content
+                img(src=`/images/content-0${i+1}.jpg`)
+                p !{item.body}
         #sns
           section.section#04
             .section-title
-              img(src="/images/title-04.svg")
+              .label.font-style-2 SNS
+              span プロジェクトの最新情報や、みなさんの
+              span.color-white ＃あたらしいハロウィン
+              span をご紹介しています。
             .section-content
             .share.flex-box
               a(href="")
