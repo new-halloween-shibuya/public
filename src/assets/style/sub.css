@@ -108,6 +108,16 @@
         @media (--lg) {
           display: block;
         }
+
+        .under {
+          text-decoration: underline;
+          display: block;
+        }
+
+        .attention {
+          font-size: 13px;
+          margin-top: 1em;
+        }
       }
     }
     
