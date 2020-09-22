@@ -29,7 +29,7 @@ block vars
           "＊安全なボンドをお使いください",
           "＊子ども用の安全なはさみをご用意ください"
         ],
-        href: "https://example.com"
+        href: "/images/hnhs2020musk.pdf"
       },
       {
         label: '型紙にあわせて布を切り、パーツをつくります。'
@@ -56,13 +56,18 @@ include /component/globals/head.pug
             .course
               each item, i in course
                 .item
-                  img.num(src=`/images/ws-num-${i+1}.svg`, alt=`${i+1}`)
-                  .label #{item.label}
+                  .title
+                    img.num(src=`/images/ws-num-${i+1}.svg`, alt=`${i+1}`)
+                    span #{item.label}
                   img.img(src=`/images/ws-${i+1}.jpg`, alt=`${item.label}`)
                   if i === 0
                     .btn-wrap
                       a.btn(href=`${item.href}` download) 型紙はこちら
-            .label たとえば…こんなのつくれるよ！
+            .label
+              span.inline-block たとえば…
+              span.inline-block こんなのつくれるよ！
             .showroom
+              - for (var x = 0; x < 5; x++)
+                img(src=`/images/sr-${x+1}.jpg`, alt="")
       .global-footer
         include /component/globals/footer.pug
