@@ -30,8 +30,9 @@ include /component/globals/head.pug
           .sub
             img.sp(src="/images/sub.svg")
           .hash
-            img.sp(src="/images/hash.svg")
-            img.pc(src="/images/hash-pc.svg")
+            .label
+              span.inline-block # あたらしいハロウィン
+              span.inline-block はじめよう。
             p 集まらないハロウィンを楽しむためのさまざまな取り組みを⾏います
         .wrap#content
           each item, i in contents

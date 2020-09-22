@@ -38,6 +38,16 @@
       padding-right: 30px;
       padding-left: 30px;
       text-align: left;
+
+      .label {
+        color: #CF6500;
+        font-size: 33px;
+        text-align: center;
+
+        span {
+          white-space: nowrap;
+        }
+      }
     }
   }
   
@@ -57,12 +67,12 @@
       padding-top: 70px;
     
       @media (--md) {
-        flex-basis: 30%;
-        width: 30%;
+        flex-basis: 250px;
+        width: 250px;
       }
       @media (--lg) {
-        flex-basis: 30%;
-        width: 30%;
+        flex-basis: 250px;
+        width: 250px;
       }
   
       &-title {
@@ -86,6 +96,7 @@
   
         .catch {
           font-size: 14px;
+          line-height: 1.2
         }
         .num {
           font-size: 64px;
@@ -98,6 +109,13 @@
           margin-bottom: auto;
           margin-top: auto;
           white-space: nowrap;
+
+          @media (--md) {
+            font-size: 18px;
+          }
+          @media (--lg) {
+            font-size: 18px;
+          }
         }
       }
     
@@ -147,6 +165,22 @@
         img {
           margin: 0 auto;
           margin-bottom: 30px;
+          transform: rotate(-3deg);
+        }
+      }
+      &-content {
+        text-align: center;
+
+        p {
+          text-align: left;
+          @media (--md) {
+            font-size: 23px;
+          }
+        
+          @media (--lg) {
+            font-size: 23px;
+          }
+          
         }
       }
     }
@@ -154,6 +188,16 @@
     .btn-wrap {
       text-align: center;
       margin-bottom: 20px;
+
+      @media (--md) {
+        display: inline-block;
+        margin: 10px;
+      }
+    
+      @media (--lg) {
+        display: inline-block;
+        margin: 10px;
+      }
     }
   }
   
