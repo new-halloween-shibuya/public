@@ -215,6 +215,16 @@ img {
     z-index: 99;
     padding-top: 100px;
 
+    @media (--md) {
+      width: 380px;
+      left: auto;
+    }
+  
+    @media (--lg) {
+      width: 380px;
+      left: auto;
+    }
+
     .list {
       color: #000;
       margin-bottom: 30px;

@@ -53,5 +53,6 @@ block vars
     Array.prototype.forEach.call(menuBtns, node => {
       node.addEventListener('click', () => {
         menu.style.display = 'none'
+        togl.classList.remove('open')
       })
     });
