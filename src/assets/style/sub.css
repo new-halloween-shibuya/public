@@ -82,7 +82,9 @@
       font-size: 15px;
       line-height: 2.3;
       width: 18.5em;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
 
       @media (--md) {
         display: none
