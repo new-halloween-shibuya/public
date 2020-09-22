@@ -284,11 +284,6 @@ img {
   margin-top: 10em;
   background: #CF6500;
 
-  .bg {
-    position: relative;
-    top: -20px;
-    width: 100%;
-  }
   .wrap {
     padding: 20px;
 
