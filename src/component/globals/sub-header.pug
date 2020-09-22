@@ -15,8 +15,11 @@ block vars
         .headline
           each li in HEAD
             span.inline-block !{li}
-      each item in BODY
-        span.inline-block !{item}
+      each item, i  in BODY
+        if INDEX == "03" && (i == 1 || i == 2)
+          span.inline-block.under !{item}
+        else
+          span.inline-block !{item}
       if AT
         .attention
           each li in AT
