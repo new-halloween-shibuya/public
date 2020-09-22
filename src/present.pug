@@ -7,10 +7,15 @@ block vars
       "ハロウィン"
     ]
   -
+    var HEAD = [
+      "応募期間 :",
+      "2020.9.24 - 2020.10.14"
+    ]
+  -
     var BODY = [
       "公式Instagramアカウントをフォローして、",
-      "#集まらないハロウィン",
-      "#あたらしいハロウィン",
+      "<span class='under'>#集まらないハロウィン</span>",
+      "<span class='under'>#あたらしいハロウィン</span>",
       "２つのハッシュタグをつけて投稿すると、",
       "抽選で５０名様にハロウィンマスクをプレゼント！"
     ]
@@ -28,5 +33,13 @@ include /component/globals/head.pug
       .global-body
         .hero.fadein
           include /component/globals/sub-header.pug
+        section.section#present
+          .label みなさんの「集まらないハロウィン」を楽しむアイデアを、ぜひシェアしてください！
+          .btn-wrap
+            a.btn(href="https://example.com")
+              img(src="/images/ig.svg")
+              div
+                span.inline-block 公式Instagram
+                span.inline-block アカウントはこちら
       .global-footer
         include /component/globals/footer.pug

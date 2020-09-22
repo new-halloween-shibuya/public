@@ -27,11 +27,11 @@ block vars
       //- .li
       //-   a.section-title(href="#top") 区長メッセージ
       .li
-        a.section-title(href="#content") #あたらしいハロウィン
-        ul
-          li: a(href="/musk") マスクで毎日ハロウィン
-          li: a(href="/workshop") 子どもとマスクづくり
-          li: a(href="/present") プレゼントマスクでハロウィン"
+        a.section-title(href="/#content") #あたらしいハロウィン
+        .list
+          .sub.li: a(href="/musk") 01 #マスクで毎日ハロウィン
+          .sub.li: a(href="/workshop") 02 #子どもとマスクづくり
+          .sub.li: a(href="/present") 03 #プレゼントマスクでハロウィン
       .li
         a.section-title(href="#sns") SNS
       .li
@@ -42,8 +42,10 @@ block vars
     togl.addEventListener('click', () => {
       if(menu.style.display === 'block') {
         menu.style.display = 'none'
+        togl.classList.remove('open')
       } else {
         menu.style.display = 'block'
+        togl.classList.add('open')
       }
     })
 

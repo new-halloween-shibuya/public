@@ -11,16 +11,24 @@ block vars
   .hero-content
     img(src=`/images/content-${INDEX}.jpg`)
     .body
+      if HEAD
+        .headline
+          each li in HEAD
+            span.inline-block !{li}
       each item in BODY
-        span.inline-block #{item}
+        span.inline-block !{item}
       if AT
         .attention
           each li in AT
-            .li #{li}
+            .li !{li}
 .hero-sub
+  if HEAD
+    .headline
+      each li in HEAD
+        .li !{li}
   each item in BODY
-    span.inline-block #{item}
+    span.inline-block !{item}
   if AT
     .attention
       each li in AT
-        .li #{li}
+        .li !{li}
