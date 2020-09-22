@@ -18,6 +18,8 @@
   }
 
   .hero { 
+    overflow: hidden;
+
     .wrap {
       padding: 80px 40px;
       transform: rotate(-3deg);
@@ -78,7 +80,7 @@
 
     &-content {
       display: flex;
-      max-width: 830px;
+      max-width: 900px;
       margin: auto;
 
       img {
