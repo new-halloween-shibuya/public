@@ -12,14 +12,15 @@
       justify-content: center;
       align-items: center;
       padding: 40px;
-      padding-top: 100px;
       
       @media (--md) {
         height: auto;
+        padding-top: 100px;
       }
     
       @media (--lg) {
         height: auto;
+        padding-top: 100px;
       }
     }
     
