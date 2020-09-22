@@ -1,7 +1,10 @@
 block vars
   - var BODY_CLASS = "musk sub"
   - var INDEX = "01"
-  - var COPY = "マスクで毎日ハロウィン"
+  -
+    var COPY = [
+      "#マスクで毎日ハロウィン"
+    ]
   -
     var BODY = [
       "１⽇だけのお祭りよりも、",
@@ -27,20 +30,7 @@ include /component/globals/head.pug
         include /component/globals/header.pug
       .global-body
         .hero.fadein
-          .wrap
-            .hero-title
-              span.catch あたらしい<br />ハロウィン
-              spam.num.font-style-2 #{INDEX}
-              span.copy #!{COPY}
-              img(width="80px" src="/images/split-musk.svg")
-            .hero-content
-              img(src=`/images/content-${INDEX}.jpg`)
-              .body
-                each item in BODY
-                  span.inline-block #{item}
-            .hero-sub
-              each item in BODY
-                span.inline-block #{item}
+          include /component/globals/sub-header.pug
         section.section#musk
           .section-content 
             .btn 10/1 発売開始！
@@ -51,6 +41,6 @@ include /component/globals/head.pug
             .photos
               - for (var x = 0; x < 3; x++)
                 .item
-                  img(src=`/images/musk/photos-${x+1}.jpg`)
+                  img(src=`/images/musk/photo-${x+1}.jpg`)
       .global-footer
         include /component/globals/footer.pug

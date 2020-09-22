@@ -1,0 +1,26 @@
+block vars
+
+.wrap
+  .hero-title
+    span.catch あたらしい<br />ハロウィン
+    spam.num.font-style-2 #{INDEX}
+    .copy
+      each item in COPY
+        span.inline-block #{item}
+    img(width="80px" src="/images/split-musk.svg")
+  .hero-content
+    img(src=`/images/content-${INDEX}.jpg`)
+    .body
+      each item in BODY
+        span.inline-block #{item}
+      if AT
+        .attention
+          each li in AT
+            .li #{li}
+.hero-sub
+  each item in BODY
+    span.inline-block #{item}
+  if AT
+    .attention
+      each li in AT
+        .li #{li}

@@ -1,0 +1,32 @@
+block vars
+  - var BODY_CLASS = "present sub"
+  - var INDEX = "03"
+  -
+    var COPY = [
+      "#プレゼントマスクで",
+      "ハロウィン"
+    ]
+  -
+    var BODY = [
+      "公式Instagramアカウントをフォローして、",
+      "#集まらないハロウィン",
+      "#あたらしいハロウィン",
+      "２つのハッシュタグをつけて投稿すると、",
+      "抽選で５０名様にハロウィンマスクをプレゼント！"
+    ]
+  -
+    var AT = [
+      "＊当選者にはDMを通じてご連絡させていただきます",
+      "＊⾮公開アカウントは対象外となります"
+    ]
+
+include /component/globals/head.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .hero.fadein
+          include /component/globals/sub-header.pug
+      .global-footer
+        include /component/globals/footer.pug

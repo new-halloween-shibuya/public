@@ -1,7 +1,11 @@
 block vars
   - var BODY_CLASS = "wp sub"
   - var INDEX = "02"
-  - var COPY = "子どもとマスクづくりハロウィン"
+  -
+    var COPY = [
+      "#子どもとマスクづくり",
+      "ハロウィン"
+    ]
   -
     var BODY = [
       "友だちと遊ぶときも、",
@@ -45,22 +49,10 @@ include /component/globals/head.pug
         include /component/globals/header.pug
       .global-body
         .hero.fadein
-          .wrap
-            .hero-title
-              span.catch あたらしい<br />ハロウィン
-              spam.num.font-style-2 #{INDEX}
-              span.copy #!{COPY}
-              img(width="80px" src="/images/split-musk.svg")
-            .hero-content
-              img(src=`/images/content-${INDEX}.jpg`)
-              .body
-                each item in BODY
-                  span.inline-block #{item}
-            .hero-sub
-              each item in BODY
-                span.inline-block #{item}
+          include /component/globals/sub-header.pug
         section.section#ws
           .section-content 
+            .label ハロウィンマスクのつくりかた
             .course
               each item, i in course
                 .item
@@ -70,6 +62,7 @@ include /component/globals/head.pug
                   if i === 0
                     .btn-wrap
                       a.btn(href=`${item.href}` download) 型紙はこちら
-
+            .label たとえば…こんなのつくれるよ！
+            .showroom
       .global-footer
         include /component/globals/footer.pug
