@@ -22,6 +22,49 @@ block vars
       "街のメンテナンスや",
       "ゴミ清掃の費⽤として寄付されます。"
     ]
+  -
+    var musks = [
+      {
+        label: "Jack O'Lantern",
+        ruby: "ジャック・オ・ランタン"
+      },
+      {
+        label: 'Skeleton',
+        ruby: '墓場からお出ましガイコツ'
+      },
+      {
+        label: 'Dracula',
+        ruby: '目覚めたドラキュラ'
+      },
+      {
+        label: 'Blue Frankenstein',
+        ruby: '人造人間フランケン'
+      },
+      {
+        label: 'Pink Frankenstein',
+        ruby: 'キュートなフランケン'
+      },
+      {
+        label: 'Werewolf',
+        ruby: '月夜のオオカミ男'
+      },
+      {
+        label: 'Black cat',
+        ruby: 'イタズラ化けねこ'
+      },
+      {
+        label: 'White Cat',
+        ruby: '笑う魔女ねこ'
+      },
+      {
+        label: 'Slit Mouth Woman',
+        ruby: 'ワタシ、キレイ？口裂け女'
+      },
+      {
+        label: "Devil's Hand",
+        ruby: '呪われた悪魔の手'
+      }
+    ]
 
 include /component/globals/head.pug
   .page-wrap
@@ -35,9 +78,12 @@ include /component/globals/head.pug
           .section-content.wrap
             .btn 10/1 発売開始！
             .items
-              - for (var x = 0; x < 10; x++)
+              each musk, x in musks
                 .item
+                  .num No.#{x+1}
                   img(src=`/images/musk/musk-${x+1}.png`)
+                  .label #{musk.label}
+                  .ruby #{musk.ruby}
             .photos
               - for (var x = 0; x < 3; x++)
                 .item
