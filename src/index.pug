@@ -4,14 +4,17 @@ block vars
   -
     var contents = [
       {
+        key: "musk",
         copy: "マスクで毎日ハロウィン",
         body: "毎日をハロウィンに。ジャック・オ・ランタン、ドラキュラ、狼男…つけるだけで仮装できる、ドネーション付きマスクです。"
       },
       {
+        key: "workshop",
         copy: "子どもとマスクづくりハロウィン<br />ハロウィン",
         body: "子どもたちとつくる、オリジナルハロウィンマスクの作り方をご紹介します。"
       },
       {
+        key: "present",
         copy: "プレゼントマスクで<br />ハロウィン",
         body: "抽選でハロウィンマスクをプレゼント！詳しくはこちらから。 ( 応募期間 2020.9.24 - 2020.10.14)"
       }
@@ -37,14 +40,15 @@ include /component/globals/head.pug
         .wrap#content
           each item, i in contents
             section.section.fadein(id=`c0${i+1}`)
-              .section-title
-                span.catch あたらしい<br />ハロウィン
-                spam.num.font-style-2 0#{i+1}
-                span.copy #!{item.copy}
-                img(width="30%" src="/images/split-musk.svg")
-              section-content
-                img(src=`/images/content-0${i+1}.jpg`)
-                p !{item.body}
+              a(href=`/${item.key}`)
+                .section-title
+                  span.catch あたらしい<br />ハロウィン
+                  spam.num.font-style-2 0#{i+1}
+                  span.copy #!{item.copy}
+                  img(width="30%" src="/images/split-musk.svg")
+                section-content
+                  img(src=`/images/content-0${i+1}.jpg`)
+                  p !{item.body}
         .wrap#sns
           section.section#04
             .section-title
