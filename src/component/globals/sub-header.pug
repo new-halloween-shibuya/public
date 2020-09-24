@@ -1,37 +1,39 @@
 block vars
 
 .wrap
-  .hero-title
-    span.catch あたらしい<br />ハロウィン
-    spam.num.font-style-2 #{INDEX}
-    .copy
-      each item in COPY
-        span.inline-block #{item}
-    img(width="80px" src="/images/split-musk.svg")
-  .hero-content
-    img(src=`/images/content-${INDEX}.jpg`)
-    .body
-      if HEAD
-        .headline
-          each li in HEAD
-            span.inline-block !{li}
-      each item, i  in BODY
-        if INDEX == "03" && (i == 1 || i == 2)
-          span.inline-block.under !{item}
-        else
-          span.inline-block !{item}
-      if AT
-        .attention
-          each li in AT
-            .li !{li}
-.hero-sub
-  if HEAD
-    .headline
-      each li in HEAD
-        .li !{li}
-  each item in BODY
-    span.inline-block !{item}
-  if AT
-    .attention
-      each li in AT
-        .li !{li}
+  img(src=`/images/main-${INDEX}.png`)
+  img.sp(src=`/images/main-${INDEX}-sp.png`)
+//-   .hero-title
+//-     span.catch あたらしい<br />ハロウィン
+//-     spam.num.font-style-2 #{INDEX}
+//-     .copy
+//-       each item in COPY
+//-         span.inline-block #{item}
+//-     img(width="80px" src="/images/split-musk.svg")
+//-   .hero-content
+//-     img(src=`/images/content-${INDEX}.jpg`)
+//-     .body
+//-       if HEAD
+//-         .headline
+//-           each li in HEAD
+//-             span.inline-block !{li}
+//-       each item, i  in BODY
+//-         if INDEX == "03" && (i == 1 || i == 2)
+//-           span.inline-block.under !{item}
+//-         else
+//-           span.inline-block !{item}
+//-       if AT
+//-         .attention
+//-           each li in AT
+//-             .li !{li}
+//- .hero-sub
+//-   if HEAD
+//-     .headline
+//-       each li in HEAD
+//-         .li !{li}
+//-   each item in BODY
+//-     span.inline-block !{item}
+//-   if AT
+//-     .attention
+//-       each li in AT
+//-         .li !{li}

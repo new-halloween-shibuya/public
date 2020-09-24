@@ -20,12 +20,36 @@
   .hero { 
     overflow: hidden;
 
-    .wrap {
-      padding: 80px 40px;
-      transform: rotate(-3deg);
+    img {
+      display: none;
+
+      @media (--md) {
+        display: block
+      }
+    
+      @media (--lg) {
+        display: block
+      }
+
+      &.sp {
+        display: block;
+
+        @media (--md) {
+          display: none
+        }
+      
+        @media (--lg) {
+          display: none
+        }
+      }
     }
 
-    &-title {
+    /* .wrap {
+      padding: 80px 40px;
+      transform: rotate(-3deg);
+    } */
+
+    /* &-title {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -119,9 +143,9 @@
           margin-top: 1em;
         }
       }
-    }
+    } */
     
-    &-sub {
+    /* &-sub {
       font-size: 23px;
       line-height: 2.3;
       padding: 0 25px;
@@ -141,14 +165,14 @@
         font-size: 17px;
         margin-top: 1em;
       }
-    }
+    } */
 
-    .headline {
+    /* .headline {
       color: #cf6500;
       line-height: 1.2;
       font-size: 26px;
       margin-bottom: 1em;
-    }
+    } */
   }
 
   .section {
