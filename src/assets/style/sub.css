@@ -339,6 +339,13 @@
       justify-content: center;
 
       img {
+        @media (--md) {
+          width: 30%
+        }
+      
+        @media (--lg) {
+          width: 30%
+        }
         &:nth-child(odd) {
           margin-left: -40px;
           @media (--md) {
