@@ -195,7 +195,17 @@
         margin: auto;
         margin-bottom: 90px;
       }
-
+      .btn {
+        padding: 1.5em 0;
+        width: 330px;
+        @media (--md) {
+          width: 348px;
+        }
+      
+        @media (--lg) {
+          width: 348px;
+        }
+      }
       .items {
         flex-wrap: wrap;
         justify-content: space-evenly;
