@@ -1,5 +1,5 @@
 block vars
-  - var BODY_CLASS = "musk sub"
+  - var BODY_CLASS = "mask sub"
   - var INDEX = "01"
   -
     var COPY = [
@@ -23,7 +23,7 @@ block vars
       "ゴミ清掃の費⽤として寄付されます。"
     ]
   -
-    var musks = [
+    var masks = [
       {
         label: "Jack O'Lantern",
         ruby: "ジャック・オ・ランタン"
@@ -74,19 +74,19 @@ include /component/globals/head.pug
       .global-body
         .hero.fadein
           include /component/globals/sub-header.pug
-        section.section#musk
+        section.section#mask
           .section-content.wrap
             .btn 10/1 発売開始！
             .items
-              each musk, x in musks
+              each mask, x in masks
                 .item
                   .num No.#{x+1}
-                  img(src=`/images/musk/musk-${x+1}.png`)
-                  .label #{musk.label}
-                  .ruby #{musk.ruby}
+                  img(src=`/images/mask/mask-${x+1}.png`)
+                  .label #{mask.label}
+                  .ruby #{mask.ruby}
             .photos
               - for (var x = 0; x < 3; x++)
                 .item
-                  img(src=`/images/musk/photo-${x+1}.jpg`)
+                  img(src=`/images/mask/photo-${x+1}.jpg`)
       .global-footer
         include /component/globals/footer.pug

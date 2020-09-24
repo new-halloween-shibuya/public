@@ -198,6 +198,18 @@
         display: inline-block;
         margin: 10px;
       }
+
+      .btn {
+        padding: 1.5em 0;
+        width: 330px;
+        @media (--md) {
+          width: 348px;
+        }
+      
+        @media (--lg) {
+          width: 348px;
+        }
+      }
     }
   }
   

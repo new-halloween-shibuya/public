@@ -4,7 +4,7 @@ block vars
   -
     var contents = [
       {
-        key: "musk",
+        key: "mask",
         copy: "マスクで毎日ハロウィン",
         body: "毎日をハロウィンに。ジャック・オ・ランタン、ドラキュラ、狼男…つけるだけで仮装できる、ドネーション付きマスクです。"
       },
@@ -45,7 +45,7 @@ include /component/globals/head.pug
                   span.catch あたらしい<br />ハロウィン
                   spam.num.font-style-2 0#{i+1}
                   span.copy #!{item.copy}
-                  img(width="30%" src="/images/split-musk.svg")
+                  img(width="30%" src="/images/split-mask.svg")
                 section-content
                   img(src=`/images/content-0${i+1}.jpg`)
                   p !{item.body}
@@ -69,7 +69,7 @@ include /component/globals/head.pug
             .section-content
               p 共感してくださる企業・個人のみなさまが、自由に参加できるプロジェクトです。本プロジェクトのロゴマークはWEBや印刷物等へお使いいただけます。
               .btn-wrap
-                a.btn(href="/images/logo.zip" download) ロゴはこちら
+                a.btn(href="/images/logo.zip" download) ロゴデータはこちら
               .btn-wrap
                 a.btn(href="mailto:hnhs.info@gmail.com" target="_blank") お問い合わせ
       .global-footer

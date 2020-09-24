@@ -99,8 +99,8 @@ module.exports = (env, argv) => {
         }
       }),
       new HtmlWebPackPlugin({
-        template: path.join(__dirname, 'src/musk.pug'),
-        filename: 'musk/index.html'
+        template: path.join(__dirname, 'src/mask.pug'),
+        filename: 'mask/index.html'
       }),
       new HtmlWebPackPlugin({
         template: path.join(__dirname, 'src/workshop.pug'),
