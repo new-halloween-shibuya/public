@@ -1,8 +1,18 @@
 block vars
 
 .wrap
-  img(src=`/images/main-${INDEX}.png`)
-  img.sp(src=`/images/main-${INDEX}-sp.png`)
+  img(
+    src=`/images/main-${INDEX}.png`
+    srcset=`/images/main-${INDEX}.png 1x, /images/main-${INDEX}@2x.png 2x`
+    width="900"
+    height="770"
+  )
+  img.sp(
+    src=`/images/main-${INDEX}-sp.png`
+    srcset=`/images/main-${INDEX}-sp.png 1x, /images/main-${INDEX}-sp@2x.png 2x`
+    width="482"
+    height="auto"
+  )
 //-   .hero-title
 //-     span.catch あたらしい<br />ハロウィン
 //-     spam.num.font-style-2 #{INDEX}

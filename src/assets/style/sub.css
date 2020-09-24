@@ -335,6 +335,8 @@
 
         .btn {
           background: #fff;
+          display: block;
+          line-height: 70px;
 
           &-wrap {
             width: 100%;
