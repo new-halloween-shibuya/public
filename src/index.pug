@@ -17,6 +17,9 @@ block vars
         key: "present",
         copy: "プレゼントマスクで<br />ハロウィン",
         body: "抽選でハロウィンマスクをプレゼント！詳しくはこちらから。 ( 応募期間 2020.9.24 - 2020.10.14)"
+      },
+      {
+        copy: "Coming Soon",
       }
     ]
 
@@ -45,10 +48,12 @@ include /component/globals/head.pug
                   span.catch あたらしい<br />ハロウィン
                   spam.num.font-style-2 0#{i+1}
                   span.copy #!{item.copy}
-                  img(width="30%" src="/images/split-mask.svg")
-                section-content
-                  img(src=`/images/content-0${i+1}.jpg`)
-                  p !{item.body}
+                  if item.body
+                    img(width="30%" src="/images/split-mask.svg")
+                if item.body
+                  section-content
+                    img(src=`/images/content-0${i+1}.jpg`)
+                    p !{item.body}
         .wrap#sns
           section.section#04
             .section-title
