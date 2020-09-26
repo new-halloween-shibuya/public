@@ -120,6 +120,12 @@ module.exports = (env, argv) => {
           to: path.resolve(__dirname, 'dist/')
         }
       ]),
+      new CopyPlugin([
+        {
+          from: path.resolve(__dirname, 'src/fav.svg'),
+          to: path.resolve(__dirname, 'dist/fav.svg')
+        }
+      ]),
     ]
       .concat(new HTMLInlineCSSWebpackPlugin()),
     module: {
