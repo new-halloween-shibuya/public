@@ -184,9 +184,9 @@
 
   #mask {
     .section-content  {
-      max-width: 860px;
+      max-width: 900px;
       margin: auto;
-          margin-bottom: 50px;
+      margin-bottom: 50px;
       text-align: center;
       padding-top: 100px;
 
