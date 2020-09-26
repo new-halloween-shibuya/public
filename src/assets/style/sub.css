@@ -263,7 +263,13 @@
         .item {
           flex-basis: 360px;
           margin-bottom: 28px;
-
+          @media (--md) {
+            flex-basis: 30%;
+          }
+        
+          @media (--lg) {
+            flex-basis: 30%;
+          }
           &:nth-child(odd) {
             margin-left: -28px;
             @media (--md) {
