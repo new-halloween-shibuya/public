@@ -352,12 +352,15 @@
       justify-content: center;
 
       img {
+        height: 100%;
         @media (--md) {
-          width: 30%
+          width: 30%;
+          height: auto;
         }
       
         @media (--lg) {
-          width: 30%
+          width: 30%;
+          height: auto;
         }
         &:nth-child(odd) {
           margin-left: -40px;
