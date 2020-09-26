@@ -261,11 +261,11 @@
           display: flex;
         }
         .item {
-          flex-basis: 30%;
-          margin-bottom: 40px;
+          flex-basis: 360px;
+          margin-bottom: 28px;
 
           &:nth-child(odd) {
-            margin-left: -40px;
+            margin-left: -28px;
             @media (--md) {
               margin-left: 0px;
             }
@@ -276,7 +276,7 @@
           }
 
           &:nth-child(even) {
-            margin-right: -40px;
+            margin-right: -28px;
 
             @media (--md) {
               margin-right: 0px;
