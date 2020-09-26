@@ -60,6 +60,10 @@ include /component/globals/head.pug
                     img.num(src=`/images/ws-num-${i+1}.svg`, alt=`${i+1}`)
                     span #{item.label}
                   img.img(src=`/images/ws-${i+1}.png`, alt=`${item.label}`)
+                  if item.attention
+                    .attention
+                      each li, i in item.attention
+                        .li #{li}
                   if i === 0
                     .btn-wrap
                       a.btn(href=`${item.href}` download) 型紙はこちら
