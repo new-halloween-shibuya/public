@@ -361,12 +361,12 @@
         height: 100%;
         @media (--md) {
           width: 30%;
-          height: auto;
+          /* height: auto; */
         }
       
         @media (--lg) {
           width: 30%;
-          height: auto;
+          /* height: auto; */
         }
         &:nth-child(odd) {
           margin-left: -40px;
