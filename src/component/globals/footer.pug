@@ -11,13 +11,13 @@ include /env.pug
       .section-title
         span 後援
       each item in support
-        .li {{ item }}
+        .li !{item}
   if sponsor.length > 0
     .section.sponsor
       .section-title
         span 共同企業
       each item in sponsor
-        .li {{ item }}
+        .li !{item}
 
 script.
   (function(d) {
