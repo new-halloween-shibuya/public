@@ -43,7 +43,7 @@ include /component/globals/head.pug
         .wrap#content
           each item, i in contents
             section.section.fadein(id=`c0${i+1}`)
-              a(href=`/${item.key}`)
+              if !item.key
                 .section-title
                   span.catch あたらしい<br />ハロウィン
                   spam.num.font-style-2 0#{i+1}
@@ -54,6 +54,18 @@ include /component/globals/head.pug
                   section-content
                     img(src=`/images/content-0${i+1}.jpg`)
                     p !{item.body}
+              else
+                a(href=`/${item.key}`)
+                  .section-title
+                    span.catch あたらしい<br />ハロウィン
+                    spam.num.font-style-2 0#{i+1}
+                    span.copy #!{item.copy}
+                    if item.body
+                      img(width="30%" src="/images/split-mask.svg")
+                  if item.body
+                    section-content
+                      img(src=`/images/content-0${i+1}.jpg`)
+                      p !{item.body}
         .wrap#sns
           section.section#04
             .section-title
