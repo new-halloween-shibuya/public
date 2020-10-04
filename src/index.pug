@@ -5,18 +5,27 @@ block vars
     var contents = [
       {
         key: "mask",
+        href: '/mask',
         copy: "マスクで毎日ハロウィン",
         body: "毎日をハロウィンに。ジャック・オ・ランタン、ドラキュラ、狼男…つけるだけで仮装できる、ドネーション付きマスクです。"
       },
       {
         key: "workshop",
+        href: '/workshop',
         copy: "子どもとマスクづくり<br />ハロウィン",
         body: "子どもたちとつくる、オリジナルハロウィンマスクの作り方をご紹介します。"
       },
       {
         key: "present",
+        href: '/present',
         copy: "プレゼントマスクで<br />ハロウィン",
         body: "抽選でハロウィンマスクをプレゼント！詳しくはこちらから。 ( 応募期間 2020.10.14まで)"
+      },
+      {
+        key: "virtual",
+        href: '/backgrounds',
+        copy: "バーチャル背景で<br />ハロウィン",
+        body: "今年のハロウィンを楽しむためのオリジナルバーチャル背景を、こちらからダウンロードできます。 "
       },
       {
         copy: "Coming Soon",
@@ -43,7 +52,7 @@ include /component/globals/head.pug
         .wrap#content
           each item, i in contents
             section.section.fadein(id=`c0${i+1}`)
-              if !item.key
+              if !item.href
                 .section-title
                   span.catch あたらしい<br />ハロウィン
                   spam.num.font-style-2 0#{i+1}
@@ -55,7 +64,7 @@ include /component/globals/head.pug
                     img(src=`/images/content-0${i+1}.jpg`)
                     p !{item.body}
               else
-                a(href=`/${item.key}`)
+                a(href=`${item.href}`)
                   .section-title
                     span.catch あたらしい<br />ハロウィン
                     spam.num.font-style-2 0#{i+1}

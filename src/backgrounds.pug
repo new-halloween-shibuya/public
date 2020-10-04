@@ -1,0 +1,34 @@
+block vars
+  - var BODY_CLASS = "bg sub"
+  - var INDEX = "04"
+  -
+    var COPY = [
+      "#バーチャル背景で",
+      "ハロウィン"
+    ]
+  -
+    var BODY = [
+      "HELLO! NEW HALLOWEENの",
+      "オリジナルバーチャル背景をご用意しました。",
+      "リモート会議でこっそりハロウィンしたり、",
+      "オンラインご飯会でおそろい背景にしたり、",
+      "今年ならではのハロウィンを",
+      "ぜひお楽しみください！"
+    ]
+
+include /component/globals/head.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .hero
+          include /component/globals/sub-header.pug
+        section.section#bg
+          .section-content.wrap
+            .photos
+              - for (var x = 0; x < 3; x++)
+                a.item(href=`/images/bg/bg-${x+1}.jpg` download)
+                  img(src=`/images/bg-${x+1}.jpg`, alt=`ハロウィンバーチャル背景${x+1}` , width="1920" , height="1081")
+      .global-footer
+        include /component/globals/footer.pug
