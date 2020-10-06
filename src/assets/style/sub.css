@@ -428,12 +428,12 @@
   }
 
   #bg {
+    background: #fff;
+
     .section-content {
       max-width: 900px;
       margin: auto;
-      margin-bottom: 50px;
       text-align: center;
-      padding-top: 100px;
     }
     .photos {
       flex-wrap: wrap;
@@ -448,6 +448,7 @@
         display: flex;
       }
       .item {
+        display: block;
         flex-basis: 360px;
         margin-bottom: 28px;
 
@@ -480,14 +481,6 @@
             margin-right: 0px;
           }
         }
-      }
-
-      a {
-        border: 10px solid #fff;
-      }
-
-      img {
-        filter: drop-shadow(2px 2px 2px #0005);
       }
     }
   }
