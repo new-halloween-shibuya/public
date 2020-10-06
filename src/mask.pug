@@ -26,43 +26,53 @@ block vars
     var masks = [
       {
         label: "Jack O'Lantern",
-        ruby: "ジャック・オ・ランタン"
+        ruby: "ジャック・オ・ランタン",
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Skeleton',
-        ruby: '墓場からお出ましガイコツ'
+        ruby: '墓場からお出ましガイコツ',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Dracula',
-        ruby: '目覚めたドラキュラ'
+        ruby: '目覚めたドラキュラ',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Blue Frankenstein',
-        ruby: '人造人間フランケン'
+        ruby: '人造人間フランケン',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Pink Frankenstein',
-        ruby: 'キュートなフランケン'
+        ruby: 'キュートなフランケン',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Werewolf',
-        ruby: '月夜のオオカミ男'
+        ruby: '月夜のオオカミ男',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Black cat',
-        ruby: 'イタズラ化けねこ'
+        ruby: 'イタズラ化けねこ',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'White Cat',
-        ruby: '笑う魔女ねこ'
+        ruby: '笑う魔女ねこ',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: 'Slit Mouth Woman',
-        ruby: 'ワタシ、キレイ？口裂け女'
+        ruby: 'ワタシ、キレイ？口裂け女',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       },
       {
         label: "Devil's Hand",
-        ruby: '呪われた悪魔の手'
+        ruby: '呪われた悪魔の手',
+        href: "https://peatix.com/sales/event/1638649/tickets"
       }
     ]
 
@@ -79,7 +89,7 @@ include /component/globals/head.pug
             a.btn(href="https://hnhs-mask.peatix.com/" target="_blank") 購入はこちら！
             .items
               each mask, x in masks
-                .item
+                a.item(href=`${mask.href}` target="_blank")
                   .num No.#{x+1}
                   img(src=`/images/mask/mask-${x+1}.png`)
                   .label #{mask.label}
