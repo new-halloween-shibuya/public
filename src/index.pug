@@ -40,6 +40,29 @@ include /component/globals/head.pug
       .global-body
         .wrap#hero
           .main
+            #logo
+            script(src="./lottie.min.js")
+            script.
+              var params = {
+                  container: document.getElementById('logo'),
+                  renderer: 'svg',
+                  loop: true,
+                  autoplay: true,
+                  // animationData: animationData
+                  path: "data.json",
+              };
+
+              var anim = lottie.loadAnimation(params);
+            style.
+              #logo {
+                background-color:#ffffff;
+                width:100%;
+                display:block;
+                overflow: hidden;
+                transform: translate3d(0,0,0) rotate(-3deg);
+                text-align: center;
+                opacity: 1;
+              }
             img.sp(src="/images/main.svg")
             img.pc(src="/images/main-pc.svg")
           .sub

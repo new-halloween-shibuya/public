@@ -9,9 +9,10 @@
     .main {
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px;
+      /* padding: 40px; */
       
       @media (--md) {
         height: auto;
