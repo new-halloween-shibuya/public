@@ -8,6 +8,8 @@
   #hero {
     .main {
       height: 100vh;
+      overflow: hidden;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
