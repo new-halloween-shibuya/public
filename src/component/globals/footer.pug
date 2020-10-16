@@ -15,9 +15,10 @@ include /env.pug
   if sponsor.length > 0
     .section.sponsor
       .section-title
-        span 共同企業
-      each item in sponsor
-        .li !{item}
+        span 賛同企業
+      .items
+        each item in sponsor
+          .li !{item}
 
 script.
   (function(d) {
