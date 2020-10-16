@@ -114,6 +114,10 @@ module.exports = (env, argv) => {
         template: path.join(__dirname, 'src/backgrounds.pug'),
         filename: 'backgrounds/index.html'
       }),
+      new HtmlWebPackPlugin({
+        template: path.join(__dirname, 'src/stories.pug'),
+        filename: 'stories/index.html'
+      }),
       // new GenerateSW(),
       new MiniCssExtractPlugin({
         filename: "assets/css/style.css"

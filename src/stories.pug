@@ -1,0 +1,78 @@
+block vars
+  - var BODY_CLASS = "stories sub"
+  - var INDEX = "05"
+  -
+    var COPY = [
+      "#ストーリーズでハロウィン"
+    ]
+  -
+    var BODY = [
+      "集まらないハロウィンが楽しくなる",
+      "AR仮装エフェクトや、",
+      "遊べるスタンプができました。",
+      "Instagramのストーリーズ投稿で",
+      "ぜひお楽しみください！"
+    ]
+  -
+    var ARS = [
+      {
+        label: "New Halloween Mask",
+        href: "https://www.instagram.com/ar/345366656568616/",
+      },
+      {
+        label: "Halloween Moyai",
+        href: "https://www.instagram.com/ar/2790799307834413/",
+      },
+      {
+        label: "Halloween Dog Statue",
+        href: "https://www.instagram.com/ar/743903179525341/",
+      },
+      {
+        label: "おうちでハロウィン",
+        href: "https://www.instagram.com/ar/716243669103855/",
+      },
+      {
+        label: "0密ハロウィン",
+        href: "https://www.instagram.com/ar/390497981944674",
+      },
+      {
+        label: "オンラインでハロウィン",
+        href: "https://www.instagram.com/ar/395522361846117/",
+      },
+      {
+        label: "集まれるハロウィンまでの<br>カウントダウン",
+        href: "https://www.instagram.com/ar/2773537099544825",
+      },
+      {
+        label: "今年のハロウィンは<br>渋谷に行かない！",
+        href: "https://www.instagram.com/ar/752981685259206/",
+      },
+      {
+        label: "あたらしいハロウィン",
+        href: "https://www.instagram.com/ar/671973840104324/",
+      },
+      {
+        label: "ひとりでハロウィン",
+        href: "https://www.instagram.com/ar/392932041718377/",
+      },
+    ]
+
+include /component/globals/head.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .hero
+          include /component/globals/sub-header.pug
+        section.section#ar
+          .section-content.wrap
+            .items
+              each ar, x in ARS
+                a.item(href=`${ar.href}` target="_blank")
+                  img(src=`/images/ar/ar-${x+1}.gif`)
+                  .label !{ar.label}
+                  .btn
+                    span このエフェクトを試す
+      .global-footer
+        include /component/globals/footer.pug
